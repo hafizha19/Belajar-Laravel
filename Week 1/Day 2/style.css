@@ -1,0 +1,50 @@
+body {
+    background: url(./pattern.jpg);
+    margin: 0;
+}
+
+header {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    display: flex;
+    margin-right: 30px;
+}
+
+section {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background: white;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    background: black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    padding: 0.1px;
+    text-align: center;
+}
