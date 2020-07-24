@@ -6,9 +6,9 @@
 * Day 2: [Pengenalan CSS](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%201/Day%202)
 * Day 3: [Bootstrap](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%201/Day%203)
 * Day 4: [Pengenalan JavaScript](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%201/Day%204)
-<!-- * Day 5: [JavaScript DOM](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%201/Day%205)
+* Day 5: [JavaScript DOM](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%201/Day%205)
 
-## Week 2
+<!-- ## Week 2
 
 * Day 1: [PHP 1](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%201)
 * Day 2: [PHP 2](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%202)
