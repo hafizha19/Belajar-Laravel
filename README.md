@@ -13,8 +13,8 @@
 * Day 1: [PHP 1](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%201)
 * Day 2: [PHP 2](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%202)
 * Day 3: [GIT](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%203)
-<!-- * Day 4: [OOP PHP](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%204)
-* Day 5: [SQL](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%205)
+* Day 4: [OOP PHP](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%204)
+<!-- * Day 5: [SQL](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%205)
 
 ## Week 3
 
