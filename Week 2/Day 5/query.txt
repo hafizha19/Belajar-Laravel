@@ -1,0 +1,20 @@
+
+============ 1
+CREATE DATABASE mysop
+
+============ 2
+CREATE TABLE `myshop`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `myshop`.`categories` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `myshop`.`items` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `description` VARCHAR(255) NOT NULL , `price` INT NOT NULL , `stock` INT NOT NULL , `category_id` INT NOT NULL , PRIMARY KEY (`id`), FOREIGN KEY (`category_id`) REFERENCES categories(`id`) );
+
+============ 3
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (NULL, 'John Doe', 'john@doe.com', 'john123'), (NULL, 'Jane Doe', 'jane@doe.com', 'jenita123') 
+INSERT INTO `categories` (`id`, `name`) VALUES (NULL, 'gadget'), (NULL, 'cloth'), (NULL, 'men'), (NULL, 'women'), (NULL, 'branded') 
+INSERT INTO `items` (`id`, `name`, `description`, `price`, `stock`, `category_id`) VALUES (NULL, 'Sumsang B40', 'HP keren dari merek Sumsang', '4000000', '100', '1'), (NULL, 'Uniklooh', 'Baju keren dari brand ternama', '50000', '50', '2'), (NULL, 'IMHO Watch', 'Jam tangan anak yang jujur banget', '2000000', '10', '1') 
+
+============ 4
+SELECT `name`, `email` FROM users;
+SELECT * FROM items WHERE `price`>1000000;
+SELECT * FROM `items` WHERE `name` LIKE '%unikloo%' 
+SELECT items.name, items.description, items.price, items.stock, categories.id, categories.name FROM items INNER JOIN categories ON items.id = categories.id;
+UPDATE items SET items.price=25000000 WHERE items.name LIKE '%Sumsang%';
