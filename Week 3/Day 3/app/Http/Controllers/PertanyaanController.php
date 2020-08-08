@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Pertanyaan;
 
 class PertanyaanController extends Controller
 {
@@ -14,9 +15,10 @@ class PertanyaanController extends Controller
      */
     public function index()
     {
-        $pertanyaan = DB::table('pertanyaan')->get();
+        // $pertanyaan = DB::table('pertanyaan')->get();
+        $pertanyaan = Pertanyaan::all();
 
-        return view('crud.index', ['pertanyaan' => $pertanyaan]);
+        return view('crud.index', compact('pertanyaan'));
     }
 
     /**
@@ -37,7 +39,8 @@ class PertanyaanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Pertanyaan::create($request->all());
+        return redirect('/')->with('status', 'Pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -46,9 +49,9 @@ class PertanyaanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pertanyaan $pertanyaan)
     {
-        //
+        return view('crud.show', compact('pertanyaan'));
     }
 
     /**
@@ -57,9 +60,9 @@ class PertanyaanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pertanyaan $pertanyaan)
     {
-        //
+        return view('crud.edit', compact('pertanyaan'));
     }
 
     /**
@@ -69,9 +72,14 @@ class PertanyaanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        //
+        $pertanyaan::where('id', $pertanyaan->id)->update([
+            'judul' => $request->judul,
+            'isi' => $request->isi,
+            'profil_id' => $request->profil_id
+        ]);
+        return redirect('/')->with('status', "Pertanyaan Berhasil Diubah");
     }
 
     /**
@@ -80,8 +88,9 @@ class PertanyaanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::destroy($pertanyaan->id);
+        return redirect('/')->with('status', 'Pertanyaan Berhasil Dihapus');
     }
 }

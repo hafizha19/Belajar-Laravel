@@ -35,3 +35,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PertanyaanController@index');
 Route::get('/crud/create', 'PertanyaanController@create');
+Route::post('/', 'PertanyaanController@store');
+Route::get('/crud/{pertanyaan}', 'PertanyaanController@show');
+Route::delete('/crud/{pertanyaan}', 'PertanyaanController@destroy');
+Route::get('/crud/{pertanyaan}/edit', 'PertanyaanController@edit');
+Route::put('/crud/{pertanyaan}', 'PertanyaanController@update');

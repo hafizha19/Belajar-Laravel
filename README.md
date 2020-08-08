@@ -22,8 +22,8 @@
 * Day 2: [Intro Laravel](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%202)
 * Day 3: [Template Blade](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%203)
 * Day 4: [Laravel Migration](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%204)
-<!-- * Day 5: [CRUD 1](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%205)
-
+* Day 5: [CRUD 1](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%203)
+<!-- 
 ## Week 4
 
 * Day 1: [CRUD 2](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%201)

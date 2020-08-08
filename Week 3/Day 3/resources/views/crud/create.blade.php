@@ -6,14 +6,19 @@
 
 @section('content')
 <div class="row container">
-    <form class="col-5 justify-content-center">
+    <form class="col-5 justify-content-center" action="/" method="POST">
+        @csrf
         <div class="form-group">
-            <label for="formGroupExampleInput">Example label</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+            <label for="judul">Judul</label>
+            <input type="text" class="form-control" name="judul" id="judul" placeholder="Masukkan Judul">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Another label</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+            <label for="isi">Isi</label>
+            <input type="text" class="form-control" name="isi" id="isi" placeholder="Masukkan Isi">
+        </div>
+        <div class="form-group">
+            <label for="profil_id">Profil ID</label>
+            <input type="text" class="form-control" name="profil_id" id="profil_id" placeholder="Masukkan Profil ID">
         </div>
         <button type="submit" class="btn btn-primary">Tambah Pertanyaan</button>
     </form>

@@ -5,19 +5,23 @@
 @endsection
 
 @section('content')
+@if (session('status'))
+<div class="alert alert-success mt-3">
+    {{ session('status') }}
+</div>
+@endif
 <div class="container-fluid row">
     @foreach ($pertanyaan as $tanya)
-
-    <div class="card mx-1 my-3 col-3" style="width: 18rem;">
+    <div class="card ml-2 mt-3 col-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{$tanya->judul}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{$tanya->profil_id}}</h6>
             <p class="card-text">{{$tanya->isi}}</p>
-            <span><small>Created {{ $tanya->tanggal_dibuat }} |</small></span>
-            <span> <small>Updated {{ $tanya->tanggal_diperbaharui }}</small> </span>
+            <span><small>Created at {{ $tanya->created_at }} </small></span>
             <br>
-            <a href="" class="badge badge-info">Edit</a>
-            <a href="" class="badge badge-danger">Delete</a>
+            <span> <small>Updated at {{ $tanya->updated_at }}</small> </span>
+            <br>
+            <a href="/crud/{{$tanya->id}}" class="badge badge-primary">Detail</a>
         </div>
     </div>
     @endforeach

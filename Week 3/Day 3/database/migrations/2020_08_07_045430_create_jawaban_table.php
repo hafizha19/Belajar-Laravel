@@ -17,8 +17,7 @@ class CreateJawabanTable extends Migration
             $table->increments('id');
             $table->string('isi');
             $table->timestamps();
-            $table->unsignedInteger('profil_id');
-            $table->foreign('profil_id')->references('id')->on('profil');
+            
         });
     }
 
