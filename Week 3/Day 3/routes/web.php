@@ -25,10 +25,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('items.create');
 // });
 
-Route::get('/', function(){
-    return view('tugas2/index');
-});
+// Route::get('/', function(){
+//     return view('tugas2/index');
+// });
 
-Route::get('/data-tables', function(){
-    return view('tugas2/data-tables');
-});
+// Route::get('/data-tables', function(){
+//     return view('tugas2/data-tables');
+// });
+
+Route::get('/', 'PertanyaanController@index');
+Route::get('/crud/create', 'PertanyaanController@create');
