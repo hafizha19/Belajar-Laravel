@@ -1,7 +1,7 @@
-@extends('crud.master')
+@extends('pertanyaans.master')
 
 @section('btn-navbar')
-<a href="/crud/create" class="btn btn-light">Tambah Pertanyaan</a>
+<a href="{{ route('pertanyaans.create') }}" class="btn btn-light">Tambah Pertanyaan</a>
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
             <br>
             <span> <small>Updated at {{ $tanya->updated_at }}</small> </span>
             <br>
-            <a href="/crud/{{$tanya->id}}" class="badge badge-primary">Detail</a>
+            <a href="/pertanyaans/{{$tanya->id}}" class="badge badge-primary">Detail</a>
         </div>
     </div>
     @endforeach

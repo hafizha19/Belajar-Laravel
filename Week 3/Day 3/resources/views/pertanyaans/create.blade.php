@@ -1,12 +1,13 @@
-@extends('crud.master')
+@extends('pertanyaans.master')
 
 @section('btn-navbar')
-<a href="/" class="btn btn-light">Lihat Pertanyaan</a>
+<a href="{{ route('pertanyaans.index') }}" class="btn btn-light">Lihat Pertanyaan</a>
 @endsection
 
 @section('content')
 <div class="row container">
-    <form class="col-5 justify-content-center" action="/" method="POST">
+<form class="col-5 justify-content-center" action="{{ route('pertanyaans.store')}}" method="POST">
+        {{-- @method('POST') --}}
         @csrf
         <div class="form-group">
             <label for="judul">Judul</label>

@@ -8,6 +8,12 @@ use App\Pertanyaan;
 
 class PertanyaanController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +24,7 @@ class PertanyaanController extends Controller
         // $pertanyaan = DB::table('pertanyaan')->get();
         $pertanyaan = Pertanyaan::all();
 
-        return view('crud.index', compact('pertanyaan'));
+        return view('pertanyaans.index', compact('pertanyaan'));
     }
 
     /**
@@ -28,7 +34,7 @@ class PertanyaanController extends Controller
      */
     public function create()
     {
-        return view('crud.create');
+        return view('pertanyaans.create')->middleware();
     }
 
     /**
@@ -40,7 +46,7 @@ class PertanyaanController extends Controller
     public function store(Request $request)
     {
         Pertanyaan::create($request->all());
-        return redirect('/')->with('status', 'Pertanyaan Berhasil Ditambahkan');
+        return redirect('pertanyaans')->with('status', 'Pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -51,7 +57,7 @@ class PertanyaanController extends Controller
      */
     public function show(Pertanyaan $pertanyaan)
     {
-        return view('crud.show', compact('pertanyaan'));
+        return view('pertanyaans.show', compact('pertanyaan'));
     }
 
     /**
@@ -62,7 +68,7 @@ class PertanyaanController extends Controller
      */
     public function edit(Pertanyaan $pertanyaan)
     {
-        return view('crud.edit', compact('pertanyaan'));
+        return view('pertanyaans.edit', compact('pertanyaan'));
     }
 
     /**
@@ -79,7 +85,7 @@ class PertanyaanController extends Controller
             'isi' => $request->isi,
             'profil_id' => $request->profil_id
         ]);
-        return redirect('/')->with('status', "Pertanyaan Berhasil Diubah");
+        return redirect('pertanyaans')->with('status', "Pertanyaan Berhasil Diubah");
     }
 
     /**
@@ -91,6 +97,6 @@ class PertanyaanController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/')->with('status', 'Pertanyaan Berhasil Dihapus');
+        return redirect('pertanyaans')->with('status', 'Pertanyaan Berhasil Dihapus');
     }
 }

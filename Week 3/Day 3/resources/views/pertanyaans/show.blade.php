@@ -1,7 +1,7 @@
-@extends('crud.master')
+@extends('pertanyaans.master')
 
 @section('btn-navbar')
-<a href="/" class="btn btn-light">Lihat Pertanyaan</a>
+<a href="{{route('pertanyaans.index')}}" class="btn btn-light">Lihat Pertanyaan</a>
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
         <br>
         <div class="container row">
         <a href="{{$pertanyaan->id}}/edit" class="btn btn-info btn-sm mr-3">Edit</a>
-            <form action="/crud/{{$pertanyaan->id}}" method="POST">
+            <form action="/pertanyaans/{{$pertanyaan->id}}" method="POST">
                 @method('delete')
                 @csrf
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
