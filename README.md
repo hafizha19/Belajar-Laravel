@@ -27,6 +27,6 @@
 ## Week 4
 
 * Day 1: [CRUD 2 - Auth](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%203/Day%203)
-<!-- * Day 2: [Eloquent Relationship](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%202)
-* Day 3: [Laravel Library/Package](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%203)
-* Day 4: [Final Project](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%204) -->
+<!--  * Day 2: [Eloquent Relationship](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%202) -->
+* Day 3: [Laravel Library/Package](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%204/Day%203)
+<!-- * Day 4: [Final Project](https://github.com/hafizha19/Belajar-Laravel/tree/master/Week%202/Day%204) --> 
